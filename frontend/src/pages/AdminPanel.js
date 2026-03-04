@@ -19,19 +19,19 @@ const AdminPanel = () => {
 
   const fetchBooks = () => {
     axios
-      .get("http://localhost:5000/api/books")
+      .get("https://librarysystem-etab.onrender.com")
       .then((res) => setBooks(res.data));
   };
 
   const handleAdd = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:5000/api/books", form);
+    await axios.post("https://librarysystem-etab.onrender.com", form);
     fetchBooks();
   };
 
   const deleteBook = async (id) => {
     if (window.confirm("Delete this book?")) {
-      await axios.delete(`http://localhost:5000/api/books/${id}`);
+      await axios.delete(`https://librarysystem-etab.onrender.com/${id}`);
       fetchBooks();
     }
   };
