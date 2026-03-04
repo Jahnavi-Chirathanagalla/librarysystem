@@ -16,7 +16,7 @@ const Register = () => {
         e.preventDefault();
         try {
             // Role is hardcoded to "student" as per your requirement
-            await axios.post('http://localhost:5000/api/auth/register', {
+            await axios.post('https://librarysystem-etab.onrender.com', {
                 ...formData,
                 role: 'student'
             });
