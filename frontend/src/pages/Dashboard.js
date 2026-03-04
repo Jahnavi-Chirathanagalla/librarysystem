@@ -10,7 +10,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/books")
+      .get("https://librarysystem-etab.onrender.com")
       .then((res) => setBooks(res.data));
   }, []);
 
@@ -53,8 +53,19 @@ const Dashboard = () => {
             onChange={(e) => setDeptFilter(e.target.value)}
           >
             <option value="All">All Departments</option>
-            <option value="Computer Science">Computer Science / CAC</option>
-            <option value="Data Science">Data Science</option>
+            <option value="Computer Science">Computer Science(CSE)</option>
+            <option value="Data Science">Data Science(DS)</option>
+            <option value="AI & ML">AI & ML</option>
+            <option value="IOT">IOT</option>
+            <option value="CSBS">CSBS</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+            <option value="Mechanical">Mechanical</option>
+            <option value="Civil">Civil</option>
+            <option value="IT">IT</option>
+            <option value="Chemical">Chemical</option>
+            <option value="MCA">MCA</option>
+            <option value="MBA">MBA</option>
             <option value="Common">Common Books</option>
           </select>
         </div>
